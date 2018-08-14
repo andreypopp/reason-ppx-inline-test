@@ -1,5 +1,5 @@
 {
-  "hash": "54c5eedd36edfb19b93adf0ad19c144f",
+  "hash": "93bd3aa90667858a55ac938308408836",
   "root": "hello-reason@path:.",
   "node": {
     "ocaml@4.6.4": {
@@ -23,6 +23,7 @@
       },
       "dependencies": [
         "@esy-ocaml/reason@link:./reason", "@opam/dune@opam:1.1.1",
+        "@opam/ppx_expect@opam:v0.11.0",
         "@opam/ppx_inline_test@opam:v0.11.0", "ocaml@4.6.4"
       ]
     },
@@ -47,6 +48,30 @@
         "@esy-ocaml/substs@0.0.1", "@opam/base-bytes@opam:base",
         "@opam/camomile@opam:1.0.1", "@opam/jbuilder@opam:transition",
         "@opam/react@opam:1.2.1"
+      ]
+    },
+    "@opam/variantslib@opam:v0.11.0": {
+      "record": {
+        "name": "@opam/variantslib",
+        "version": "opam:v0.11.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/variantslib.v0.11.0+opam.tar.gz#md5:98284c5c1a64b865898e2f54623cafc5",
+          "archive:https://ocaml.janestreet.com/ocaml-core/v0.11/files/variantslib-v0.11.0.tar.gz#md5:3031317975df165cc3154578680eddfb"
+        ],
+        "files": [],
+        "opam": {
+          "name": "variantslib",
+          "version": "v0.11.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/variantslib\"\nbug-reports: \"https://github.com/janestreet/variantslib/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.1.0\"}\n]\nconflicts: [\n  \"jbuilder\" {= \"1.0+beta19\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/variantslib.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppxlib@opam:0.3.0"
       ]
     },
     "@opam/utop@opam:2.2.0": {
@@ -140,6 +165,28 @@
         "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition"
       ]
     },
+    "@opam/seq@opam:0.1": {
+      "record": {
+        "name": "@opam/seq",
+        "version": "opam:0.1",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/seq.0.1+opam.tar.gz#md5:82d3359b7b0a1d5fb0f8f6dea16d24be",
+          "archive:https://github.com/c-cube/seq/archive/0.1.tar.gz#md5:0e87f9709541ed46ecb6f414bc31458c"
+        ],
+        "files": [],
+        "opam": {
+          "name": "seq",
+          "version": "0.1",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"simon.cruanes.2007@m4x.org\"\nauthors: \"Simon Cruanes\"\nlicense: \"GPL\"\ntags: [\"iterator\" \"seq\" \"pure\" \"list\" \"compatibility\" \"cascade\"]\nhomepage: \"https://github.com/c-cube/seq/\"\nbug-reports: \"https://github.com/c-cube/seq/issues\"\ndepends: [\n  \"ocamlfind\" {build}\n  \"ocamlbuild\" {build}\n]\navailable: ocaml-version < \"4.07.0\"\nbuild: [make \"build\"]\ninstall: [make \"install\"]\nremove: [\"ocamlfind\" \"remove\" \"seq\"]\ndev-repo: \"git+https://github.com/c-cube/seq.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/ocamlbuild@opam:0.12.0",
+        "@opam/ocamlfind@opam:1.8.0"
+      ]
+    },
     "@opam/result@opam:1.3": {
       "record": {
         "name": "@opam/result",
@@ -183,6 +230,28 @@
         "@opam/ocamlfind@opam:1.8.0", "@opam/topkg@opam:0.9.1"
       ]
     },
+    "@opam/re@opam:1.8.0": {
+      "record": {
+        "name": "@opam/re",
+        "version": "opam:1.8.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/re.1.8.0+opam.tar.gz#md5:2126a0727f42f1cae2566a2d1aea7ffa",
+          "archive:https://github.com/ocaml/ocaml-re/releases/download/1.8.0/re-1.8.0.tbz#md5:765f6f8d3e6ab200866e719ed7e5178d"
+        ],
+        "files": [],
+        "opam": {
+          "name": "re",
+          "version": "1.8.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"rudi.grinberg@gmail.com\"\nauthors: [\n  \"Jerome Vouillon\"\n  \"Thomas Gazagnaire\"\n  \"Anil Madhavapeddy\"\n  \"Rudi Grinberg\"\n  \"Gabriel Radanne\"\n]\nlicense: \"LGPL-2.0 with OCaml linking exception\"\nhomepage: \"https://github.com/ocaml/ocaml-re\"\nbug-reports: \"https://github.com/ocaml/ocaml-re/issues\"\ndepends: [\n  \"jbuilder\" {build & >= \"1.0+beta10\"}\n  \"ounit\" {test}\n  \"seq\"\n]\navailable: ocaml-version >= \"4.02.3\"\nbuild: [\n  [\"jbuilder\" \"subst\" \"-n\" name] {pinned}\n  [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\n]\nrun-test: [\"jbuilder\" \"runtest\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/ocaml/ocaml-re.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition",
+        "@opam/seq@opam:0.1"
+      ]
+    },
     "@opam/ppxlib@opam:0.3.0": {
       "record": {
         "name": "@opam/ppxlib",
@@ -205,6 +274,54 @@
         "@opam/dune@opam:1.1.1", "@opam/ocaml-compiler-libs@opam:v0.11.0",
         "@opam/ocaml-migrate-parsetree@opam:1.0.11",
         "@opam/ppx_derivers@opam:1.0", "@opam/stdio@opam:v0.11.0"
+      ]
+    },
+    "@opam/ppx_variants_conv@opam:v0.11.1": {
+      "record": {
+        "name": "@opam/ppx_variants_conv",
+        "version": "opam:v0.11.1",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_variants_conv.v0.11.1+opam.tar.gz#md5:720024b1a2519fb54965c3e1cc38abe0",
+          "archive:https://github.com/janestreet/ppx_variants_conv/archive/v0.11.1.tar.gz#md5:146b49b84315b7d67c1ca758fcbf2fb2"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_variants_conv",
+          "version": "v0.11.1",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_variants_conv\"\nbug-reports: \"https://github.com/janestreet/ppx_variants_conv/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"variantslib\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.3.0\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_variants_conv.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppxlib@opam:0.3.0", "@opam/variantslib@opam:v0.11.0"
+      ]
+    },
+    "@opam/ppx_sexp_conv@opam:v0.11.2": {
+      "record": {
+        "name": "@opam/ppx_sexp_conv",
+        "version": "opam:v0.11.2",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_sexp_conv.v0.11.2+opam.tar.gz#md5:db2348b7ed0a541aabe9dc08d4a472ac",
+          "archive:https://github.com/janestreet/ppx_sexp_conv/archive/v0.11.2.tar.gz#md5:77d3b30b3d9c5810552bde2027656b8d"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_sexp_conv",
+          "version": "v0.11.2",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_sexp_conv\"\nbug-reports: \"https://github.com/janestreet/ppx_sexp_conv/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.3.0\"}\n]\nconflicts: [\n  \"jbuilder\" {= \"1.0+beta19\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_sexp_conv.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppxlib@opam:0.3.0"
       ]
     },
     "@opam/ppx_inline_test@opam:v0.11.0": {
@@ -231,6 +348,84 @@
         "@opam/ppxlib@opam:0.3.0"
       ]
     },
+    "@opam/ppx_here@opam:v0.11.0": {
+      "record": {
+        "name": "@opam/ppx_here",
+        "version": "opam:v0.11.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_here.v0.11.0+opam.tar.gz#md5:f1f736c1a9edbe51f523c9d291595c80",
+          "archive:https://ocaml.janestreet.com/ocaml-core/v0.11/files/ppx_here-v0.11.0.tar.gz#md5:479c9cd5f6ef90c2df9f01eab9d6c91d"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_here",
+          "version": "v0.11.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_here\"\nbug-reports: \"https://github.com/janestreet/ppx_here/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.1.0\"}\n]\nconflicts: [\n  \"jbuilder\" {= \"1.0+beta19\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_here.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppxlib@opam:0.3.0"
+      ]
+    },
+    "@opam/ppx_fields_conv@opam:v0.11.0": {
+      "record": {
+        "name": "@opam/ppx_fields_conv",
+        "version": "opam:v0.11.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_fields_conv.v0.11.0+opam.tar.gz#md5:9107c0eb3ea4fd474710dbec642595a0",
+          "archive:https://ocaml.janestreet.com/ocaml-core/v0.11/files/ppx_fields_conv-v0.11.0.tar.gz#md5:72f207c23d65f7f3eaabcc92e33ccdab"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_fields_conv",
+          "version": "v0.11.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_fields_conv\"\nbug-reports: \"https://github.com/janestreet/ppx_fields_conv/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"fieldslib\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.1.0\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_fields_conv.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/fieldslib@opam:v0.11.0", "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppxlib@opam:0.3.0"
+      ]
+    },
+    "@opam/ppx_expect@opam:v0.11.0": {
+      "record": {
+        "name": "@opam/ppx_expect",
+        "version": "opam:v0.11.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_expect.v0.11.0+opam.tar.gz#md5:adf070f3bf93d3d9e6d6a1815d593022",
+          "archive:https://ocaml.janestreet.com/ocaml-core/v0.11/files/ppx_expect-v0.11.0.tar.gz#md5:ee183ff3ca85954a84a54d32b8073546"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_expect",
+          "version": "v0.11.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_expect\"\nbug-reports: \"https://github.com/janestreet/ppx_expect/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_assert\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_compare\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_custom_printf\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_fields_conv\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_here\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_inline_test\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_sexp_conv\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_variants_conv\" {>= \"v0.11\" & < \"v0.12\"}\n  \"stdio\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.1.0\"}\n  \"re\" {>= \"1.5.0\"}\n]\nconflicts: [\n  \"jbuilder\" {= \"1.0+beta19\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_expect.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppx_assert@opam:v0.11.0", "@opam/ppx_compare@opam:v0.11.1",
+        "@opam/ppx_custom_printf@opam:v0.11.0",
+        "@opam/ppx_fields_conv@opam:v0.11.0", "@opam/ppx_here@opam:v0.11.0",
+        "@opam/ppx_inline_test@opam:v0.11.0",
+        "@opam/ppx_sexp_conv@opam:v0.11.2",
+        "@opam/ppx_variants_conv@opam:v0.11.1", "@opam/ppxlib@opam:0.3.0",
+        "@opam/re@opam:1.8.0", "@opam/stdio@opam:v0.11.0"
+      ]
+    },
     "@opam/ppx_derivers@opam:1.0": {
       "record": {
         "name": "@opam/ppx_derivers",
@@ -250,6 +445,79 @@
       },
       "dependencies": [
         "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition"
+      ]
+    },
+    "@opam/ppx_custom_printf@opam:v0.11.0": {
+      "record": {
+        "name": "@opam/ppx_custom_printf",
+        "version": "opam:v0.11.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_custom_printf.v0.11.0+opam.tar.gz#md5:80985602ace892a52ba2b25ed4166683",
+          "archive:https://ocaml.janestreet.com/ocaml-core/v0.11/files/ppx_custom_printf-v0.11.0.tar.gz#md5:b7cf49585319576dd77f6ddd6db95b21"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_custom_printf",
+          "version": "v0.11.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_custom_printf\"\nbug-reports: \"https://github.com/janestreet/ppx_custom_printf/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_sexp_conv\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.1.0\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_custom_printf.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppx_sexp_conv@opam:v0.11.2", "@opam/ppxlib@opam:0.3.0"
+      ]
+    },
+    "@opam/ppx_compare@opam:v0.11.1": {
+      "record": {
+        "name": "@opam/ppx_compare",
+        "version": "opam:v0.11.1",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_compare.v0.11.1+opam.tar.gz#md5:4c565efeb3ce0fd0c00de1baa28caaa0",
+          "archive:https://github.com/janestreet/ppx_compare/archive/v0.11.1.tar.gz#md5:3df1a90fc90d180b1f96cdd30e64145d"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_compare",
+          "version": "v0.11.1",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_compare\"\nbug-reports: \"https://github.com/janestreet/ppx_compare/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.3.0\"}\n]\nconflicts: [\n  \"jbuilder\" {= \"1.0+beta19\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_compare.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppxlib@opam:0.3.0"
+      ]
+    },
+    "@opam/ppx_assert@opam:v0.11.0": {
+      "record": {
+        "name": "@opam/ppx_assert",
+        "version": "opam:v0.11.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/ppx_assert.v0.11.0+opam.tar.gz#md5:694c7cf58ac6212e9ae26b344b0a0139",
+          "archive:https://ocaml.janestreet.com/ocaml-core/v0.11/files/ppx_assert-v0.11.0.tar.gz#md5:0b3aed19391e9a23217a5abf022dfe10"
+        ],
+        "files": [],
+        "opam": {
+          "name": "ppx_assert",
+          "version": "v0.11.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/ppx_assert\"\nbug-reports: \"https://github.com/janestreet/ppx_assert/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_compare\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_here\" {>= \"v0.11\" & < \"v0.12\"}\n  \"ppx_sexp_conv\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.1.0\"}\n]\nconflicts: [\n  \"jbuilder\" {= \"1.0+beta19\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/ppx_assert.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppx_compare@opam:v0.11.1", "@opam/ppx_here@opam:v0.11.0",
+        "@opam/ppx_sexp_conv@opam:v0.11.2", "@opam/ppxlib@opam:0.3.0"
       ]
     },
     "@opam/ocamlfind@opam:1.8.0": {
@@ -519,6 +787,30 @@
       "dependencies": [
         "@esy-ocaml/substs@0.0.1", "@opam/dune@opam:1.1.1",
         "@opam/ocamlfind@opam:1.8.0"
+      ]
+    },
+    "@opam/fieldslib@opam:v0.11.0": {
+      "record": {
+        "name": "@opam/fieldslib",
+        "version": "opam:v0.11.0",
+        "source": [
+          "archive:https://opam.ocaml.org/archives/fieldslib.v0.11.0+opam.tar.gz#md5:51f478aa37c4ee4ee92ecd440d02f6a0",
+          "archive:https://ocaml.janestreet.com/ocaml-core/v0.11/files/fieldslib-v0.11.0.tar.gz#md5:a42506b460a1dc47fb65a37d875211ae"
+        ],
+        "files": [],
+        "opam": {
+          "name": "fieldslib",
+          "version": "v0.11.0",
+          "opam":
+            "opam-version: \"1.2\"\nmaintainer: \"opensource@janestreet.com\"\nauthors: \"Jane Street Group, LLC <opensource@janestreet.com>\"\nlicense: \"Apache-2.0\"\nhomepage: \"https://github.com/janestreet/fieldslib\"\nbug-reports: \"https://github.com/janestreet/fieldslib/issues\"\ndepends: [\n  \"base\" {>= \"v0.11\" & < \"v0.12\"}\n  \"jbuilder\" {build & >= \"1.0+beta18.1\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0\"}\n  \"ppxlib\" {>= \"0.1.0\"}\n]\nconflicts: [\n  \"jbuilder\" {= \"1.0+beta19\"}\n]\navailable: ocaml-version >= \"4.04.1\"\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"git+https://github.com/janestreet/fieldslib.git\"",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/base@opam:v0.11.1",
+        "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.0.11",
+        "@opam/ppxlib@opam:0.3.0"
       ]
     },
     "@opam/dune@opam:1.1.1": {

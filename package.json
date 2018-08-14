@@ -9,6 +9,7 @@
   "dependencies": {
     "@opam/dune": "*",
     "@opam/ppx_inline_test": "*",
+    "@opam/ppx_expect": "*",
     "@esy-ocaml/reason": "link:./reason",
     "ocaml": "~4.6.0"
   }
